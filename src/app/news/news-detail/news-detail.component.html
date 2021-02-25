@@ -1,0 +1,17 @@
+<div *ngIf="news" class="padding-top" id="news-detail-container">
+    <div [ngStyle]="{'background-image': getUrl()}" class="header-banner">
+        <div class="mask"></div>
+        <h1>{{news.title}}<span>{{news.title}}</span></h1>
+        <img src="/assets/logo_200.png" alt="StopVet" class="logo">
+    </div>
+    <div class="content-container">
+        <span>Dodano: {{news.published.toDate() | date: 'd.MM.yyyy'}}</span>
+        <p>{{news.content}}</p>
+        <div *ngIf="auth.afAuth.authState | async">
+            <div class="button-container">
+                <button mat-raised-button color="accent" routerLink="/news/edit/{{id}}">EDYTUJ AKTUALNOŚĆ</button>
+                <button mat-raised-button color="primary" (click)="deleteNews()">USUŃ AKTUALNOŚĆ</button>
+            </div>
+        </div>
+    </div>
+</div>

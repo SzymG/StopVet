@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" id="navbar">
+    <mat-toolbar-row class="navbar-toolbar">
+        <div id="nav-container">
+            <a id="logo" routerLink="/" (click)="scrollToHome()">
+                <img src="/assets/logo_500.png" alt="StopVet">
+            </a>
+            <mat-icon *ngIf="isHomePage" id="menu-toggle" aria-hidden="false" (click)="toggleMenu()">{{menuExpanded ? 'menu_open' : 'menu'}}</mat-icon>
+        </div>
+        <div *ngIf="isHomePage" [ngClass]="menuExpanded ? '' : 'menu-hidden'" id="menu-items" class="flex-center">
+            <a id="link-home" class="nav-link reference" href="" (click)="scrollToElement($event, 'home')">Start<span class="border-link"></span></a>
+            <a id="link-howto" class="nav-link reference" href="" (click)="scrollToElement($event, 'howto')">Jak działamy<span class="border-link"></span></a>
+            <a id="link-news" class="nav-link reference" href="" (click)="scrollToElement($event, 'news')">Aktualności<span class="border-link"></span></a>
+            <a id="link-offer" class="nav-link reference" href="" (click)="scrollToElement($event, 'offer')">Oferta<span class="border-link"></span></a>
+            <a id="link-about" class="nav-link reference" href="" (click)="scrollToElement($event, 'about')">O mnie<span class="border-link"></span></a>
+            <a id="link-store" class="nav-link reference" href="" (click)="scrollToElement($event, 'store')">Sklep<span class="border-link"></span></a>
+            <a id="link-contact" class="nav-link reference" href="" (click)="scrollToElement($event, 'contact')">Kontakt<span class="border-link"></span></a>
+            <div id="animation" class="start-home"></div>
+            <div class="logout-container flex-center" title="Wyloguj się" (click)="auth.logout()" *ngIf="auth.afAuth.authState | async as user">
+                <mat-icon class="logout-icon" aria-hidden="false">exit_to_app</mat-icon>
+                <span class="logout-text">Wyloguj się</span>
+            </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

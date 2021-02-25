@@ -1,0 +1,23 @@
+<div id="news-dashboard-container" class="padding-top">
+    <div class="fields">
+        <div class="image-container">
+            <img *ngIf="imageURL" [src]="imageURL" height="400"/>
+            <input type="file" name="file" id="file" (change)="uploadImage($event)">
+        </div>
+        <div class="description-fields">
+            <mat-form-field>
+                <input matInput placeholder="Tytuł" [(ngModel)]="title">
+            </mat-form-field>
+            <mat-form-field>
+                <textarea  matInput placeholder="Treść aktualności" [(ngModel)]="content"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    <mat-checkbox [(ngModel)]="active" color="primary">Czy jest aktywne?</mat-checkbox>
+    <button *ngIf="!loading; else loadingSpinner" mat-raised-button color="primary" (click)="createPost()"
+        [disabled]="!title || !content">Dodaj aktualność</button>
+    <ng-template #loadingSpinner>
+        <mat-spinner class="loading-spinner" diameter="40">
+        </mat-spinner>
+    </ng-template>
+</div>

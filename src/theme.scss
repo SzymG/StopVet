@@ -1,0 +1,163 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$main-theme-blue: (
+    50: #e1e4e8,
+    100: #b5bcc5,
+    200: #84909f,
+    300: #536379,
+    400: #2e415c,
+    500: #09203f,
+    600: #081c39,
+    700: #061831,
+    800: #051329,
+    900: #020b1b,
+    A100: #bac9d4,
+    A200: #97aebf,
+    A400: #7593aa,
+    A700: #537895,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: white,
+    )
+);
+
+$main-theme-brown: (
+    50: #e3e2e2,
+    100: #b9b6b6,
+    200: #8a8686,
+    300: #373130,
+    400: #2e415c,
+    500: #140d0c,
+    600: #120b0a,
+    700: #0e0908,
+    800: #0b0706,
+    900: #060303,
+    A100: #ff4d4d,
+    A200: #ff1a1a,
+    A400: #e60000,
+    A700: #cd0000,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: white,
+    )
+);
+
+$contrast-theme-blue: (
+    50: #eaeff2,
+    100: #cbd7df,
+    200: #a9bcca,
+    300: #87a1b5,
+    400: #6d8ca5,
+    500: #537895,
+    600: #4c708d,
+    700: #426582,
+    800: #395b78,
+    900: #294867,
+    A100: #add5ff,
+    A200: #7abaff,
+    A400: #47a0ff,
+    A700: #2e93ff,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: $black-87-opacity,
+    )
+);
+
+$contrast-theme-brown: (
+    50: #ebebeb,
+    100: #cecccc,
+    200: #adabaa,
+    300: #8c8988,
+    400: #746f6f,
+    500: #5b5655,
+    600: #534f4e,
+    700: #494544,
+    800: #403c3b,
+    900: #2f2b2a,
+    A100: #f6a488,
+    A200: #f37f58,
+    A400: #ff531a,
+    A700: #ff4000,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: white,
+        A700: white,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$candy-app-primary: mat-palette($main-theme-brown);
+$candy-app-accent:  mat-palette($contrast-theme-brown);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn:    mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$candy-app-theme: mat-light-theme((
+  color: (
+    primary: $candy-app-primary,
+    accent: $candy-app-accent,
+    warn: $candy-app-warn,  
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);

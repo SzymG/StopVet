@@ -1,0 +1,28 @@
+<div id="news-list-page" class="padding-top">
+    <div *ngIf="!loading; else loadingTemplate">
+        <div class="header-banner" style="background-image: url('/assets/cowshed.jpg');">
+            <div class="mask"></div>
+            <h1>Aktualności<span>Aktualności</span></h1>
+            <img src="/assets/logo_200.png" alt="StopVet" class="logo">
+        </div>
+        <div class="news-container">
+            <div *ngFor="let singleNews of news" routerLink="{{singleNews.payload.doc.id}}" class="news-item">
+                <div [ngStyle]="{'background-image': getUrl(singleNews)}" class="news-background"></div>
+                <div class="news-info">
+                    <h1>{{singleNews.payload.doc.data().title}}</h1>
+                    <hr>
+                    <span>Dodano: {{singleNews.payload.doc.data().published.toDate() | date: 'd.MM.yyyy'}}</span>
+                </div>
+            </div>
+
+            <mat-icon *ngIf="auth.afAuth.authState | async" class="add-news" routerLink="/news/create"
+                aria-hidden="false" title="Dodaj aktualność">add_circle</mat-icon>
+        </div>
+    </div>
+    <ng-template #loadingTemplate>
+        <div class="loading-container">
+            <mat-spinner>
+            </mat-spinner>
+        </div>
+    </ng-template>
+</div> 
