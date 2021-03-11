@@ -1,7 +1,7 @@
 header {
     position: relative;
     background: white;
-    background-image: url(/assets/cow-lg.jpg);
+    background-image: url(~src/assets/cow-lg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,7 +107,7 @@ header {
 }
 
 main {
-    background-image: url(/assets/cover.png);
+    background-image: url(~src/assets/cover.png);
     background-attachment: fixed;
     background-size: contain;
     background-repeat: no-repeat;
@@ -154,7 +154,7 @@ footer {
 
 @media screen and (max-width: 960px) {
     header {
-        background-image: url(/assets/cow-md.jpg);
+        background-image: url(~src/assets/cow-md.jpg);
         height: 95vh !important;
         padding-bottom: calc(40px + 2.5rem);
 

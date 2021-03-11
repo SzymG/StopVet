@@ -10,12 +10,22 @@
         justify-content: center;
         
         &:nth-child(odd) {
-            background: #e1e1e1;
+            background: #f3f3f3;
+
+            .info-container {
+                margin-left: 100px;
+            }
+        }
+        
+        &:nth-child(even) {
+            .info-container {
+                margin-right: 100px;
+            }
         }
         
         .offer-item {
             width: 80%;
-            padding: 1rem 2rem;
+            padding: 2rem 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,10 +35,10 @@
             }
             
             .image-container {
-                min-width: 250px;
-                min-height: 250px;
-                max-width: 250px;
-                max-height: 250px;
+                min-width: 300px;
+                min-height: 300px;
+                max-width: 300px;
+                max-height: 300px;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -37,12 +47,21 @@
             }
     
             .info-container {
-                padding: 1.5rem 2.5rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
                 h2 {
-                    font-size: 1.5rem;
+                    width: 100%;
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                    text-align: left;
+                    letter-spacing: 1px;
+                    font-weight: normal;
+                    margin-bottom: 1.5rem;
                 }
                 p {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     text-align: justify;
                 }
             }
@@ -57,10 +76,12 @@
 
         h2 {
             margin-top: 2.5rem;
+            text-align: center !important;
         }
 
         .info-container {
             padding: 0 !important;
+            margin: 0 !important;
         }
     }
 }

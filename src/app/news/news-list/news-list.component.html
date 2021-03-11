@@ -1,9 +1,9 @@
 <div id="news-list-page" class="padding-top">
     <div *ngIf="!loading; else loadingTemplate">
-        <div class="header-banner" style="background-image: url('/assets/cowshed.jpg');">
+        <div class="header-banner" style="background-image: url('assets/cowshed.jpg');">
             <div class="mask"></div>
             <h1>Aktualności<span>Aktualności</span></h1>
-            <img src="/assets/logo_200.png" alt="StopVet" class="logo">
+            <img src="assets/logo_200.png" alt="StopVet" class="logo">
         </div>
         <div class="news-container">
             <div *ngFor="let singleNews of news" routerLink="{{singleNews.payload.doc.id}}" class="news-item">

@@ -1,5 +1,5 @@
 <header id="home-section" class="padding-top anchor_tags">
-    <img *ngIf="isMobile" src="/assets/logo_500.png" alt="StopVet">
+    <img *ngIf="isMobile" src="assets/logo_500.png" alt="StopVet">
     <span class="header-text">
         <h1><span>PROFILAKTYKA JEST</span><br/><span>TAŃSZA</span></h1>
         <p>
@@ -7,13 +7,11 @@
         </p>
     </span>
     <div class="banner-top-strap"></div>
-    <mat-icon id="scroll-down-icon" aria-hidden="false" (click)="scrollToElement('howto')">arrow_downward</mat-icon>
+    <mat-icon id="scroll-down-icon" aria-hidden="false" (click)="scrollToElement('news')">arrow_downward</mat-icon>
     <div class="mask"></div>
 </header>
-<main>    
-        <div id="howto-section" class="anchor_tags" style="height: 600px; border: 1px solid green;">
-        sekcja 2
-    </div>
+<main>
+    
     <div id="news-section" class="anchor_tags" *ngIf="carouselleNews">
         <h1 class="section-title">Aktualności</h1>
         <owl-carousel-o [options]="customOptions">
@@ -34,13 +32,14 @@
         <button *ngIf="auth.afAuth.authState | async as user" mat-raised-button color="primary"
             routerLink="/news/create">Dodaj aktualność</button>
     </div>
+    <howto-section id="howto-section" class="anchor_tags"></howto-section>
     <offer-section id="offer-section" class="anchor_tags"></offer-section>
     <about-section id="about-section" class="anchor_tags"></about-section>
     <store-section id="store-section" class="anchor_tags"></store-section>
     <contact-section id="contact-section" class="anchor_tags"></contact-section>
 </main>
 <footer style="background: #140d0c;">
-    <img src="/assets/logo_200.png" alt="StopVet" class="logo">
+    <img src="assets/logo_200.png" alt="StopVet" class="logo">
     &copy; {{currentYear}} StopVet, wszelkie prawa zastrzeżone
 </footer>
 <div *ngIf="!cookieAccepted" id="cookie-info">

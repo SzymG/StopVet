@@ -20,7 +20,7 @@ export class PageComponent implements OnInit, AfterViewInit, OnDestroy {
         navSpeed: 1000,
         autoplayTimeout: 5000,
         center: true,
-        navText: ['<img src="/assets/left-icon.png">','<img src="/assets/right-icon.png">'],
+        navText: ['<img src="assets/left-icon.png">','<img src="assets/right-icon.png">'],
         responsive: {
             0: {
                 items: 1.2

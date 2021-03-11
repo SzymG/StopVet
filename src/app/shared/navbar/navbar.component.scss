@@ -113,17 +113,17 @@
             width: 145px;
         }
 
-        .start-howto,a:nth-child(2):hover~#animation {
+        .start-news,a:nth-child(2):hover~#animation {
             width: 145px;
             left: 80px;
         }
 
         a:nth-child(3) {
-            width: 135px;
+            width: 155px;
         }
 
-        .start-news,a:nth-child(3):hover~#animation {
-            width: 135px;
+        .start-howto,a:nth-child(3):hover~#animation {
+            width: 155px;
             left: 225px;
         }
 
@@ -133,7 +133,7 @@
 
         .start-offer,a:nth-child(4):hover~#animation {
             width: 85px;
-            left: 360px;
+            left: 380px;
         }
 
         a:nth-child(5) {
@@ -142,7 +142,7 @@
 
         .start-about,a:nth-child(5):hover~#animation {
             width: 80px;
-            left: 445px;
+            left: 465px;
         }
 
         a:nth-child(6) {
@@ -151,7 +151,7 @@
 
         .start-store,a:nth-child(6):hover~#animation {
             width: 95px;
-            left: 525px;
+            left: 545px;
         }
 
         a:nth-child(7) {
@@ -160,7 +160,7 @@
 
         .start-contact,a:nth-child(7):hover~#animation {
             width: 95px;
-            left: 620px;
+            left: 640px;
         }
     }
 }
@@ -209,15 +209,15 @@
             top: 40px;
         }
 
-        .start-howto,a:nth-child(2):hover~#animation {
+        .start-news,a:nth-child(2):hover~#animation {
             width: 115px;
             left: 50% !important;
             transform: translateX(-50%);
             top: 85px;
         }
 
-        .start-news,a:nth-child(3):hover~#animation {
-            width: 125px;
+        .start-howto,a:nth-child(3):hover~#animation {
+            width: 145px;
             left: 50% !important;
             transform: translateX(-50%);
             top: 130px;

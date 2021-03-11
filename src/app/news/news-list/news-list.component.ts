@@ -28,6 +28,6 @@ export class NewsListComponent implements OnInit {
     }
 
     getUrl(news) {
-        return news.payload.doc.data().image ? `url('${news.payload.doc.data().image}')` : 'url(/assets/cowshed.jpg)';
+        return news.payload.doc.data().image ? `url('${news.payload.doc.data().image}')` : 'url(~src/assets/cowshed.jpg)';
     }
 }

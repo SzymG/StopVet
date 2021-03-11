@@ -39,7 +39,7 @@ export class NewsDetailComponent implements AfterViewInit {
     }
 
     getUrl() {
-        return this.news.image ? `url('${this.news.image}')` : 'url(/assets/cowshed.jpg)';
+        return this.news.image ? `url('${this.news.image}')` : 'url(~src/assets/cowshed.jpg)';
     }
 
     deleteNews() {

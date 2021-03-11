@@ -5,8 +5,29 @@
 $primaryColor: #140d0c;
 $secondaryColor: #585554;
 
+html {
+    overflow-y: scroll;
+    scrollbar-color: $secondaryColor $primaryColor;
+}
+
+html::-webkit-scrollbar {
+    width: 16px;
+}
+
+html::-webkit-scrollbar-track {
+    background: $primaryColor;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: $secondaryColor;
+}
+  
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 p {
     font-size: 1rem;
